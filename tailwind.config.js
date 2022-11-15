@@ -22,7 +22,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        Redrose: ["Red Rose", "normal"],
+        Redrose: ["Red Rose", "cursive"],
       },
     },
   },

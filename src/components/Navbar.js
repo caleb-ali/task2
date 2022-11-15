@@ -8,12 +8,12 @@ const Navbar = () => {
 
   return (
     <nav class="flex items-center justify-between flex-wrap pt-4 lg:pt-10 bg-white ">
-      <div class="flex items-center  mr-12 ml-4 lg:ml-12">
-        <img class="" src={homelogo} />
-        <img class="" src={metabnb} />
+      <div class="flex items-center  mr-16 ml-4 lg:ml-24">
+        <img class="h-6" src={homelogo} />
+        <img class="h-6" src={metabnb} />
       </div>
 
-      <div class="block mr-4 lg:hidden">
+      <div class="block mr-4 md:hidden">
         <button
           class=" text-hibiscus-600 rounded-md outline-none focus:border-hibiscus-400 focus:border"
           onClick={() => setNavbar(!navbar)}
@@ -55,7 +55,7 @@ const Navbar = () => {
           navbar ? "block" : "hidden"
         }`}
       >
-        <div class="text-sm lg:flex-grow">
+        <div class="text-sm lg:flex-grow font-Redrose">
           <a
             href="javascript:void(0)"
             class="block mt-4 lg:inline-block lg:mt-0 ml-4 lg:mr-8"
@@ -87,7 +87,7 @@ const Navbar = () => {
         <div>
           <a
             href="#"
-            class="inline-block text-sm px-4 py-2 leading-none rounded mt-4 lg:mt-0 lg:mr-28 ml-4 bg-hibiscus-500 hover:bg-hibiscus-600 text-white font-normal"
+            class="inline-block text-sm px-4 py-2 leading-none rounded mt-4 lg:mt-0 lg:mr-24 ml-4 bg-hibiscus-500 hover:bg-hibiscus-600 text-white font-normal font-Redrose"
           >
             connect wallet
           </a>
