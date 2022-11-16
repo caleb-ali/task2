@@ -91,14 +91,14 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="/"
+              to=""
               class="block mt-4 lg:inline-block lg:mt-0 ml-4 lg:mr-8"
               id=""
             >
               NFTs
             </Link>
 
-            <Link to="/" class="block mt-4 lg:inline-block lg:mt-0 ml-4" id="">
+            <Link to="" class="block mt-4 lg:inline-block lg:mt-0 ml-4" id="">
               Community
             </Link>
           </div>
@@ -117,10 +117,10 @@ const Navbar = () => {
           <div
             className="absolute top-0 left-0 w-full h-full bg-black/60"
             style={{ backdropFilter: "blur(3px)" }}
-            onClick={() => setModal(false)}
+            onClick={() => setModal(false) }
           />
 
-          <div class="flex justify-center">
+          <div class="flex justify-center ">
             <div class="  border absolute rounded-lg bg-white lg:w-1/3 w-3/4 divide-y ">
               <div class="flex flex-row m-4">
                 <p class="self-center">Connect Wallet</p>
