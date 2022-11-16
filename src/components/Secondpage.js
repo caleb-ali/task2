@@ -15,7 +15,7 @@ const Secondpage = () => {
         <span>carbins</span>
         <span>Off-grid</span>
         <span>Farm</span>
-        <div class="flex relative group justify-center items-center z-1001 ">
+        <div class="flex relative group justify-center items-center">
           <input
           v-model="input"
             type="text"

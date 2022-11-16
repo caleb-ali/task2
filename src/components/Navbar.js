@@ -119,7 +119,7 @@ const Navbar = () => {
       </nav>
       <div>
         {modal && (
-          <div class="  border absolute rounded bg-white lg:w-1/3   divide-y lg:ml-56">
+          <div class=" z-10 border absolute rounded bg-white lg:w-1/3   divide-y lg:ml-56">
             <div class="flex flex-row m-4">
               <p class="self-center">Connect Wallet</p>
               <span onClick={toggleModal} class="self-center absolute right-12" >
