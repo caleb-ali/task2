@@ -119,30 +119,36 @@ const Navbar = () => {
             style={{ backdropFilter: "blur(3px)" }}
             onClick={() => setModal(false)}
           />
-          <div class="  border absolute rounded-lg bg-white lg:w-1/3 divide-y ">
-            <div class="flex flex-row m-4">
-              <p class="self-center">Connect Wallet</p>
-              <span onClick={toggleModal} class="self-center absolute right-12">
-                <GrClose />
-              </span>
-            </div>
-            <div class="flex flex-col ">
-              <div class="m-4 mt-6">
-                <h4 class="text-sm">choose your preferred wallet</h4>
-                <a class="flex flex-row border rounded mt-4 p-1">
-                  <img src={metamask} class="self-center" />
-                  <span class="self-center">Metamask</span>
-                  <span class="self-center absolute right-12 ">
-                    <GrNext />
-                  </span>
-                </a>
-                <a class="flex flex-row border rounded mt-4 p-1">
-                  <img src={walletconnect} class="self-center" />
-                  <span class="self-center">WalletConnect</span>
-                  <span class="self-center absolute right-12">
-                    <GrNext />
-                  </span>
-                </a>
+
+          <div class="flex justify-center">
+            <div class="  border absolute rounded-lg bg-white lg:w-1/3 w-3/4 divide-y ">
+              <div class="flex flex-row m-4">
+                <p class="self-center">Connect Wallet</p>
+                <span
+                  onClick={toggleModal}
+                  class="self-center absolute right-12"
+                >
+                  <GrClose />
+                </span>
+              </div>
+              <div class="flex flex-col ">
+                <div class="m-4 mt-6">
+                  <h4 class="text-sm">choose your preferred wallet</h4>
+                  <a class="flex flex-row border rounded mt-4 p-1">
+                    <img src={metamask} class="self-center" />
+                    <span class="self-center">Metamask</span>
+                    <span class="self-center absolute right-12 ">
+                      <GrNext />
+                    </span>
+                  </a>
+                  <a class="flex flex-row border rounded mt-4 p-1">
+                    <img src={walletconnect} class="self-center" />
+                    <span class="self-center">WalletConnect</span>
+                    <span class="self-center absolute right-12">
+                      <GrNext />
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

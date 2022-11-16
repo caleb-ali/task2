@@ -14,7 +14,7 @@ import { dataone } from "./Data";
 const Firstpage = () => {
   return (
     <div>
-      <div class="flex flex-row lg:ml-24 md:pl-4  p-4 mt-12 pl-16">
+      <div class="flex flex-row lg:ml-24 md:pl-4  p-4 mt-12 pl-8">
         <div class=" lg:mt-36 md:mt-8 md:ml-8">
           <h2 class="font-Redrose text-xl lg:text-5xl  text-gray-900">
             Rent a <span class="text-hibiscus font-bold">Place</span> away from
