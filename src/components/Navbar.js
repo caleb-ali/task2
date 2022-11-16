@@ -6,7 +6,7 @@ import metamask from "../images/metamask.png";
 import walletconnect from "../images/walletconnect.png";
 import { GrClose } from "react-icons/gr";
 import {GrNext} from "react-icons/gr";
-import { Divider } from "@material-ui/core";
+
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
