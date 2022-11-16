@@ -5,8 +5,8 @@ import metabnb from "../images/metabnb.png";
 import metamask from "../images/metamask.png";
 import walletconnect from "../images/walletconnect.png";
 import { GrClose } from "react-icons/gr";
-import {GrNext} from "react-icons/gr";
-
+import { GrNext } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
-    setModal(!modal);
+    setModal((prevState) => !prevState);
   };
 
   if (modal) {
@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <div >
+    <div>
       <nav class="flex items-center justify-between flex-wrap p-4 lg:pt-10 bg-white ">
         <div class="flex items-center lg:ml-24">
           <img class="h-6" src={homelogo} />
@@ -74,78 +74,80 @@ const Navbar = () => {
           }`}
         >
           <div class="text-sm lg:flex-grow font-Redrose text-gray-800">
-            <a
-              href="/"
+            <Link
+              to="/"
               class="block mt-4 lg:inline-block lg:mt-0 ml-4  lg:mr-8"
               id=""
             >
               Home
-            </a>
+            </Link>
 
-            <a
-              href="/placetostay"
+            <Link
+              to="/placetostay"
               class="block mt-4 lg:inline-block lg:mt-0 ml-4 lg:mr-8"
               id=""
             >
               Place to stay
-            </a>
+            </Link>
 
-            <a
-              href="javascript:void(0)"
+            <Link
+              to="/"
               class="block mt-4 lg:inline-block lg:mt-0 ml-4 lg:mr-8"
               id=""
             >
               NFTs
-            </a>
+            </Link>
 
-            <a
-              href="javascript:void(0)"
-              class="block mt-4 lg:inline-block lg:mt-0 ml-4"
-              id=""
-            >
+            <Link to="/" class="block mt-4 lg:inline-block lg:mt-0 ml-4" id="">
               Community
-            </a>
+            </Link>
           </div>
           <div>
-            <a
-              href="#"
+            <button
               onClick={toggleModal}
               class="inline-block text-sm px-4 py-2 leading-none rounded mt-4 lg:mt-0 lg:mr-24 ml-4 bg-hibiscus-500 hover:bg-hibiscus-600 text-white font-normal font-Redrose"
             >
               connect wallet
-            </a>
+            </button>
           </div>
         </div>
       </nav>
-      <div>
-        {modal && (
-          <div class=" z-10 border absolute rounded bg-white lg:w-1/3   divide-y lg:ml-56">
+      {modal && (
+        <>
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-black/60"
+            style={{ backdropFilter: "blur(3px)" }}
+            onClick={() => setModal(false)}
+          />
+          <div class="  border absolute rounded-lg bg-white lg:w-1/3 divide-y ">
             <div class="flex flex-row m-4">
               <p class="self-center">Connect Wallet</p>
-              <span onClick={toggleModal} class="self-center absolute right-12" >
-                < GrClose />
+              <span onClick={toggleModal} class="self-center absolute right-12">
+                <GrClose />
               </span>
-              
             </div>
             <div class="flex flex-col ">
-              <div class="m-4">
-              <h4>choose your preferred wallet</h4>
-              <a class="flex flex-row border rounded mt-4 p-1">
-                <img src={metamask} class="self-center"/>
-                <span class="self-center">Metamask</span>
-                <span class="self-center absolute right-12 "><GrNext/></span>
-              </a>
-              <a class="flex flex-row border rounded mt-4 p-1">
-                <img src={walletconnect} class="self-center"/>
-                <span class="self-center">WalletConnect</span>
-                <span class="self-center absolute right-12"><GrNext/></span>
-              </a>
+              <div class="m-4 mt-6">
+                <h4 class="text-sm">choose your preferred wallet</h4>
+                <a class="flex flex-row border rounded mt-4 p-1">
+                  <img src={metamask} class="self-center" />
+                  <span class="self-center">Metamask</span>
+                  <span class="self-center absolute right-12 ">
+                    <GrNext />
+                  </span>
+                </a>
+                <a class="flex flex-row border rounded mt-4 p-1">
+                  <img src={walletconnect} class="self-center" />
+                  <span class="self-center">WalletConnect</span>
+                  <span class="self-center absolute right-12">
+                    <GrNext />
+                  </span>
+                </a>
               </div>
             </div>
           </div>
-        
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 };
