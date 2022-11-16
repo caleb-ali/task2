@@ -1,7 +1,7 @@
 import React from "react";
 import { datatwo } from "./Data";
 import star from "../images/star.png";
-{/*import setting from "../images/setting.png"; */}
+import setting from "../images/setting.png"; 
 
 const Secondpage = () => {
   return (
@@ -15,16 +15,16 @@ const Secondpage = () => {
         <span>carbins</span>
         <span>Off-grid</span>
         <span>Farm</span>
-        <div class="flex  justify-center items-center ">
+        <div class="flex  justify-center items-center ml-4">
           <input
             type="text"
             placeholder="Location"
-            class="flex flex-none border rounded-lg text-xs p-3"
+            class="flex flex-none border rounded-lg text-xs p-3  sm:ml-8"
           />
-          {/*
-          <span class="flex absolute right-0 lg:p-2 md:p-24">
-           <img src={setting} class="mr-4" />
-           </span> */}
+          
+          <span class="flex absolute  lg:right-0 lg:p-2 md:p-24">
+           <img src={setting} class="self-center lg:mr-44 ml-32" />
+           </span> 
         </div>
       </div>
      
