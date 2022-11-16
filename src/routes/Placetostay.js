@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-        <Secondpage/>
-        <Footer/>
+      <Navbar />
+      <Secondpage />
+      <Footer />
     </div>
   );
 };
