@@ -6,6 +6,7 @@ import metamask from "../images/metamask.png";
 import walletconnect from "../images/walletconnect.png";
 import { GrClose } from "react-icons/gr";
 import {GrNext} from "react-icons/gr";
+import { Divider } from "@material-ui/core";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div >
       <nav class="flex items-center justify-between flex-wrap p-4 lg:pt-10 bg-white ">
         <div class="flex items-center lg:ml-24">
           <img class="h-6" src={homelogo} />
@@ -118,28 +119,31 @@ const Navbar = () => {
       </nav>
       <div>
         {modal && (
-          <div class="modal absolute border rounded bg-gray-600 lg:w-1/3 ">
-            <div class="flex flex-row ">
+          <div class="  border absolute rounded bg-white lg:w-1/3   divide-y lg:ml-56">
+            <div class="flex flex-row m-4">
               <p class="self-center">Connect Wallet</p>
-              <span onClick={toggleModal} class="self-center" >
+              <span onClick={toggleModal} class="self-center absolute right-12" >
                 < GrClose />
               </span>
               
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col ">
+              <div class="m-4">
               <h4>choose your preferred wallet</h4>
-              <a class="flex flex-row">
+              <a class="flex flex-row border rounded mt-4 p-1">
                 <img src={metamask} class="self-center"/>
                 <span class="self-center">Metamask</span>
-                <span class="self-center"><GrNext/></span>
+                <span class="self-center absolute right-12 "><GrNext/></span>
               </a>
-              <a class="flex flex-row">
+              <a class="flex flex-row border rounded mt-4 p-1">
                 <img src={walletconnect} class="self-center"/>
                 <span class="self-center">WalletConnect</span>
-                <span class="self-center"><GrNext/></span>
+                <span class="self-center absolute right-12"><GrNext/></span>
               </a>
+              </div>
             </div>
           </div>
+        
         )}
       </div>
     </div>
